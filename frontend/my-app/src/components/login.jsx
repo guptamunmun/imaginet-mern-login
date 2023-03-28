@@ -1,7 +1,7 @@
-import {React}from "react";
+import React, { useEffect, useState }from "react";
 import {useNavigate} from "react-router-dom"
 
-const login =()=>{
+const Login =()=>{
     const [Name,setName] =useState("");
     const [mobilenumber,setMobilenumber] =useState("");
     const [Email,setEmail] =useState("");
@@ -32,7 +32,7 @@ const login =()=>{
     
 return (
     <div className="login">
-        <h1>login</h1>
+        <h1>Login</h1>
         <input
         className="inputBox"
         type="text"
@@ -55,9 +55,9 @@ return (
         onChange={(e) => setEmail(e.target.value)}
             />
             <button onClick={handleLogin} className="submit" type="button">
-                login
+                Login
             </button>
     </div>
 )
 }
-export default login;
+export default Login;
